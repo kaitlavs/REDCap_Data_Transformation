@@ -23,12 +23,16 @@
 # all text values are assumed to be correct.
 # Checkbox field types are unique because REDCap requires a separate column for each
 # permissible value found in the data dictionary.  Each separate column is filled with 1
-# or 0 depending on whether that value has been checked or not.
+# or 0 depending on whether that value has been checked or not. The new checkbox columns
+# follow the format of the field name + three underscores (___) + each individual choice
+# found in the metadata.
 # Yesno field types do not have permissible values in the data dictionary, so it is
 # assumed that 1 = no, 2 = yes.
 # Radio and Dropdown field types do not have any special cases and are both handled in
 # the same manor.
-
+#
+# DEBUGGING:
+# 
 
 import pandas as pd
 import datetime
